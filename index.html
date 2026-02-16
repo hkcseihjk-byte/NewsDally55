@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dally Update 02</title>
+    <!-- Google Fonts: Poppins and Noto Serif Bengali as per original design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              serif: ['Noto Serif Bengali', 'serif'],
+            },
+            colors: {
+              primary: '#3498db',
+              dark: '#2c3e50',
+              bg: '#f4f6f9',
+            },
+            animation: {
+              'marquee': 'marquee 25s linear infinite',
+              'pulse-blue': 'pulse-blue 2s infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              'pulse-blue': {
+                '0%': { transform: 'scale(0.95)', boxShadow: '0 0 0 0 rgba(52, 152, 219, 0.7)' },
+                '70%': { transform: 'scale(1)', boxShadow: '0 0 0 10px rgba(52, 152, 219, 0)' },
+                '100%': { transform: 'scale(0.95)', boxShadow: '0 0 0 0 rgba(52, 152, 219, 0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f4f6f9;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar for sidebar */
+      .sidebar-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+      .sidebar-scroll::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
